@@ -19,10 +19,10 @@ public class Customer implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	@Column(name="firstname")
+	@Column(name="first_name")
 	private String firstName;
 	
-	@Column(name="lastname")
+	@Column(name="last_name")
 	private String lastName;
 	
 	public Customer() {
@@ -88,6 +88,5 @@ public class Customer implements Serializable {
 			return false;
 		return true;
 	}
-	
 	
 }

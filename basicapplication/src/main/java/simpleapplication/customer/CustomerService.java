@@ -26,7 +26,7 @@ public class CustomerService {
 		return customerRepository.save(new Customer(firstName, lastName));
 	}
 
-	public String findAll() {
+	public List<Customer> findAll() {
 		
 		String result = "";
 		
