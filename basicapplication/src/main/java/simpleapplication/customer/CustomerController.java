@@ -22,7 +22,7 @@ public class CustomerController {
 	 }
 	 
 	 @RequestMapping("/find-all")
-	 public String findAll() {
+	 public List<Customer> findAll() {
 		 return customerService.findAll();
 	 }
 	 

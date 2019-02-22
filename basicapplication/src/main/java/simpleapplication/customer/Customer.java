@@ -19,10 +19,10 @@ public class Customer implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
-	@Column(name="firstname")
+	@Column(name="first_name")
 	private String firstName;
 	
-	@Column(name="lastname")
+	@Column(name="last_name")
 	private String lastName;
 	
 	public Customer() {
@@ -49,7 +49,11 @@ public class Customer implements Serializable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
+	public String getFullName() {
+		return String.format("%s, %s", firstName, lastName);
+	}
+
 	@Override
 	public String toString() {
 		return String.format("Customer[id=%d, firstname='%s', lastname ='%s']", id, firstName, lastName);
@@ -88,6 +92,4 @@ public class Customer implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
 }

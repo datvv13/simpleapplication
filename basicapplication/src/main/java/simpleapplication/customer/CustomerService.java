@@ -26,15 +26,8 @@ public class CustomerService {
 		return customerRepository.save(new Customer(firstName, lastName));
 	}
 
-	public String findAll() {
-		
-		String result = "";
-		
-		for (Customer customer : customerRepository.findAll()) {
-			result += customer.toString() + "<br>";
-		}
-		
-		return result;
+	public List<Customer> findAll() {
+		return customerRepository.findAll();
 	}
 	
 	public String findById(long id) {
