@@ -27,14 +27,7 @@ public class CustomerService {
 	}
 
 	public List<Customer> findAll() {
-		
-		String result = "";
-		
-		for (Customer customer : customerRepository.findAll()) {
-			result += customer.toString() + "<br>";
-		}
-		
-		return result;
+		return customerRepository.findAll();
 	}
 	
 	public String findById(long id) {

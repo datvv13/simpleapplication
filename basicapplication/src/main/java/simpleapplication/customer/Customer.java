@@ -49,7 +49,11 @@ public class Customer implements Serializable {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
+	public String getFullName() {
+		return String.format("%s, %s", firstName, lastName);
+	}
+
 	@Override
 	public String toString() {
 		return String.format("Customer[id=%d, firstname='%s', lastname ='%s']", id, firstName, lastName);
@@ -88,5 +92,4 @@ public class Customer implements Serializable {
 			return false;
 		return true;
 	}
-	
 }
