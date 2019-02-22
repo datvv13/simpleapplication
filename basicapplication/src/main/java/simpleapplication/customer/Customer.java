@@ -26,9 +26,9 @@ public class Customer implements Serializable {
 	private String lastName;
 	
 	public Customer() {
-		
+		// Empty constructor
 	}
-	
+
 	public Customer(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
